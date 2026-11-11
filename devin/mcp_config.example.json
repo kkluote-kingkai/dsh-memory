@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "lingshu": {
+      "command": "python3",
+      "args": ["-m", "md_cg.mcp_server"],
+      "env": {
+        "PYTHONPATH": "<REPO>",
+        "MDCG_ROOT": "<HOME>/.lingshu/cogmap",
+        "MDCG_ACTOR": "devin",
+        "MDCG_TOKEN": "<recorder-token>"
+      }
+    }
+  }
+}

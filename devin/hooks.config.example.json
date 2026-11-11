@@ -1,0 +1,52 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 <REPO>/devin/hooks/lingshu_hooks.py session-start",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 <REPO>/devin/hooks/lingshu_hooks.py post-tool",
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 <REPO>/devin/hooks/lingshu_hooks.py stop-check",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostCompaction": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 <REPO>/devin/hooks/lingshu_hooks.py post-compact",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}
